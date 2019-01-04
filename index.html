@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+
+    <title>Hello World</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="col-12">
+        <div class="owl-carousel">
+          <div> <img src="images/img1.jpeg"> </div>
+          <div> <img src="images/img1.jpeg"> </div>
+          <div> <img src="images/img1.jpeg"> </div>
+          <div> <img src="images/img1.jpeg"> </div>
+          <div> <img src="images/img1.jpeg"> </div>
+          <div> <img src="images/img1.jpeg"> </div>
+          <div> <img src="images/img1.jpeg"> </div>
+        </div>
+      </div>
+    </div>
+   
+
+    <!-- JavaScript -->
+    <script src="js/jquery.min1.12.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+          loop:true,
+          nav:true,
+          margin:10,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              },            
+              960:{
+                  items:5
+              },
+              1200:{
+                  items:6
+              }
+          }
+      });
+      owl.on('mousewheel', '.owl-stage', function (e) {
+          if (e.deltaY>0) {
+              owl.trigger('next.owl');
+          } else {
+              owl.trigger('prev.owl');
+          }
+          e.preventDefault();
+      });
+    </script>
+    
+  </body>
+</html>
